@@ -1,0 +1,397 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/********************************* GLOBAL *********************************/
+
+body {
+    background-image: url('/artdm171/images/blur.png');
+    background-color: rgba(145, 80, 171, 0.392);
+    background-size:cover;
+    color:#230f0f;
+    font-family: 'Cutive Mono', monospace;
+    margin: 0;
+    min-width: 300px;
+    text-align: center;
+}
+.filter {
+    background-color: rgba(194, 212, 255, 0.3);
+}
+* { 
+    box-sizing: border-box;
+}
+main {
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+
+    font-size: 1.6rem;
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 30px 10px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Space Mono', monospace;
+    padding: 0.5rem;
+}
+
+/******************HEADER********************/
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    padding: 3rem 0;
+    text-align: center;
+}
+header img {
+    /* background-color: #C1CAD6; */
+    border-radius: 10%;
+    margin: 0;
+    padding: 2rem 1rem 0;
+
+    width:90%;
+}
+@media screen and (min-width:600px) {
+    header {
+        background-color: rgba(200, 124, 160, .5);
+        flex-direction: column-reverse;
+        padding-top: 0;
+    }
+    header img {
+        /* background-color: #C1CAD6; */
+        border-radius: 10%;
+        margin: 1rem;
+        padding: 3rem 3rem 0;
+        
+        width:400px;
+    }
+}
+/*************generic parent/child flexbox rules************/
+.parent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.child {
+    background-color: #c87ca0;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+@media screen and (min-width: 600px) {
+    .parent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .child {
+        max-width: 400px;
+    }
+}
+/****************************** NAVIGATION ********************************/
+.header-nav {
+    background-color: rgba(222, 68, 140, 0.2);
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 0.8rem;
+}
+nav {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    padding: 10px;
+}
+nav a {
+    color: #230f0f;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #c1cad6;
+}
+.current-page {
+    text-decoration: overline;
+}
+
+/******************************** Header nav media screen rule **********************************/
+
+@media screen and (min-width: 600px) {
+    .header-nav {
+        background-color: rgba(77, 71, 144,0.9);
+        padding: .5rem;
+        margin: 0;
+    }
+    nav ul {
+        justify-content:flex-end;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+/******************************** INDEX(HOME) **********************************/
+h3 {
+    text-align: center;
+}
+
+.self-intro {
+    background-color: #fbfbfb;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    line-height: 1.6;
+    margin: 10px 0;
+    padding:10px 25px;
+}
+.education {
+    line-height: 1.6;
+    margin: 10px 0;
+    padding:40px 0;
+}
+.education-child {
+    background-color: #fbfbfb;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    padding: 0.5rem 1rem;
+    margin: 10px 10px;
+    width: 260px;
+}
+.languages-parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.languages-child {
+    background-color: #c87ca0;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    height:150px;
+    width:150px;
+}
+.languages-child p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+    .education-parent {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+/******************************** Web Design **********************************/
+.labs-parent, .projects-parent {
+
+}
+.labs-child, .projects-child {
+
+}
+.webjump .projects-child {
+    padding: 0 10px 10px 10px;
+}
+.webjump .labs-child {
+    padding: 0 10px 10px 10px;
+}
+.webjump p {
+    margin: 0;
+    padding: 5px 2px;
+}
+button {
+    color: #4D4790;
+    display: inline-block;
+    justify-items: center;
+    padding:0.3em 1.2em;
+    margin: .2rem auto;
+    border-style: none;
+    border-radius:10px;
+    text-decoration:none;
+    background-color:#d5dfed;
+    text-align:center;
+    transition: all 0.2s;
+    width: 150px;
+    }
+    button:hover{
+    background-color:rgb(64, 149, 198);
+    }
+
+@media screen and (min-width: 900px) {
+    .webjump .labs-parent {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 200px 200px 200px 200px;
+    }
+    .webjump .labs-child {
+        height: 160px;
+    }
+    .webjump .projects-parent {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 240px 240px;
+    }
+    .webjump .projects-child {   
+        height: 200px;
+    }
+
+}
+@media screen and (min-width: 1200px) {
+    .webjump .labs-parent {
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 200px 200px 200px;
+    }
+
+    .webjump .projects-parent {
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 240px;
+    }
+
+}
+@media screen and (min-width: 1600px) {
+    .webjump .labs-parent {
+        grid-template-columns: 400px 400px 400px 400px;
+        grid-template-rows: 200px 200px;
+    }
+}
+/******************************** CONTACT **********************************/
+.contact {
+    margin: 1rem;
+}
+form {
+    display: inline-block;
+    background-color: rgba(247, 233, 250, 0.8);
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    font-family: 'Courier Prime', monospace;
+    margin: 20px auto 100px; 
+    max-width:820px; 
+    padding: 1.5rem 2rem;
+    text-align: left;
+}
+
+label {
+    color: #4D4790;
+    padding-left: 2px;
+}
+input {
+    background-color: #e7e5ff;
+    border-style:#4D4790;
+    border-style: none;
+    border-radius: 10px;
+    color:#4D4790;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.1rem;
+    margin-bottom: .2rem;
+    padding:0.5rem 0.7rem;
+    width: 100%;
+}
+::placeholder {
+    color:#4D4790;
+}
+
+textarea {
+    background-color: #e7e5ff;
+    border-style: none;
+    border-radius: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.1rem;
+    height: 150px;
+    padding: 0.5rem 0.7rem;
+    resize: none;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: rgb(64, 149, 198);
+    color:#4D4790;
+    cursor:pointer;
+    margin: .2rem auto;
+    width: auto;
+}
+
+[type="submit"]:hover { background-color:rgb(74, 157, 206); }
+
+
+@media screen and (min-width: 800px) {
+    .form-top {
+        display:flex;
+        flex-direction: row;
+    }
+    .name { margin-right: 10px;}
+    .email { margin-left: 10px;
+    }
+    
+}
+
+
+/******************************** FOOTER **********************************/
+
+footer {
+    border-top: solid #4D4790 1px;
+    background-color: #6C6EA0;
+    color:#FAF4E9;
+    padding: 2rem;
+    text-align: left;
+}
+p.note {
+    padding-bottom: 20px;
+}
+.footer-parent {
+    display: flex;
+    flex-direction: column;
+}
+.footer-nav ul{
+
+    font-weight: 400;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
+.media-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.media-child img{
+    width: 20px;
+}
+.media-child {
+    padding: 0 10px;
+}
+.attribute {
+    padding-bottom: 20px;
+}
+footer a {
+    color: #f0d3db;
+}
+
+
+@media screen and (min-width: 600px) {
+    .footer-parent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
